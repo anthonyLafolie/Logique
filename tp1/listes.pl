@@ -1,6 +1,6 @@
 /*
-  Prénom1 Nom1
-  Prénom2 Nom2
+  Anthony Lafolie
+  Anthony Mendez
 */
 
 /* Question 1 */
@@ -54,10 +54,8 @@ divise([X], [X], []) :- !.
 divise([X | [X2 | Q]], [X | L1], [X2 | L2]) :- divise(Q, L1, L2).
 
 /* Question 12 */
-fusion([],[Y],[Y]) :- !.
-fusion([X],[],[X]) :- !.
-fusion([X | XS],[],[X | ZS]) :- fusion(XS, [], ZS).
-fusion([],[Y | YS],[Y | ZS]) :- fusion(YS, [], ZS).
+fusion([],L2,L2) :- !.
+fusion(L1,[],L1) :- !.
 fusion([X | XS], [Y | YS], [X | ZS]) :- X =< Y, !,  fusion(XS, [Y | YS], ZS).
 fusion([X | XS], [Y | YS], [Y | ZS]) :- X > Y, !,  fusion([X | XS], YS, ZS).
 
@@ -81,13 +79,28 @@ tri_rapide(X, L) :- extraire_tete(X, P, XS), balance(P, XS, L1, L2), tri_rapide(
 /* Opérations de base sur les ensembles */
 
 /* Question 16 */
+est_vide([]).
 
 /* Question 17 */
+ajoute_emsemble(E, [], [E]).
+ajoute_ensemble(X, L1, L2):- membre(X,L1), !,L1 = L2.
+ajoute_ensemble(X, L1, L2) :- ajoute_en_queue(X,L1,L2).
+
 
 /* Question 18 */
+sous_ensemble([], _) :- !.
+sous_ensemble([X|XS], L) :- membre(X, L), !, sous_ensemble(XS, L).
 
 /* Question 19 */
+union(L1, [], L1).
+union(L1, [Y|YS], LS) :- ajoute_ensemble(Y, L1, LT), union(LT, YS, L3), tri_rapide(L3,LS).
 
 /* Question 20 */
+intersect([],_,[]) :- !.
+intersect([X|XS],L2,[X|L]) :- membre(X,L2), !, intersect(XS,L2,L).
+intersect([_|XS],L2,L) :- intersect(XS,L2,L).
 
 /* Question 21 */
+diff([],_,[]) :- ! .
+diff([X|XS],L2,L) :- membre(X,L2), !, diff(XS,L2,L).
+diff([X|XS], L2, [X|L]) :- diff(XS,L2,L).
