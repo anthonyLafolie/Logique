@@ -1,9 +1,18 @@
-Lemma hilbertS (A B C : Prop) :  (A -> B -> C) -> (A -> B) -> A -> C.
+Lemma hilbertS (A B C : Prop) : (A -> B -> C ) -> ( A -> B ) -> A -> C.
 Proof.
+intros abc ab a.
+apply abc.
+exact a.
+apply ab.
+exact a.
+Show Proof.
 Qed.
 
-Lemma q2 (A B : Prop) :  A -> (B -> A).
+Lemma q2 (A B : Prop) : A -> (B -> A).
 Proof.
+intros a b.
+apply a.
+Show Proof.
 Qed.
 
 Lemma q3 (A B : Prop) :  A -> (~A -> B).
