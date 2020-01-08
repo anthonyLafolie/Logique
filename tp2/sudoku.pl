@@ -42,7 +42,7 @@ bonnetaille([X|XS], T):- longueur(X, T2), T is T2, !, bonnetaille(XS, T).
 ?- use_module(library(clpfd)).
 
 /* Question 5 */
-verifie([X]) :- X ins 1..9, all_distinct(X), !.
+verifie([]) :- !.
 verifie([X|XS]) :- X ins 1..9, all_distinct(X),!, verifie(XS).
 
 /* Question 6 */
