@@ -42,7 +42,7 @@ bonnetaille([X|XS], T):- longueur(X, T2), T is T2, !, bonnetaille(XS, T).
 ?- use_module(library(clpfd)).
 
 /* Question 5 */
-verifie([]) :- !.
+verifie([]).
 verifie([X|XS]) :- X ins 1..9, all_distinct(X),!, verifie(XS).
 
 /* Question 6 */
@@ -55,7 +55,7 @@ transp([],[]).
 transp([X|XS], L) :- transp(XS,LT), eclate(X,LT,L).
 
 /* Question 8 */
-decoupe([], [], [], []) :- !.
+decoupe([], [], [], []).
 decoupe([Xa,Xb,Xc|XS], [Ya,Yb,Yc|YS], [Za,Zb,Zc|ZS],[[Xa,Xb,Xc,Ya,Yb,Yc,Za,Zb,Zc]|L]):- decoupe(XS,YS,ZS,L).
 
 /* Question 9 */
