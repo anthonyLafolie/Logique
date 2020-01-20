@@ -133,9 +133,9 @@ carres4([Xa,Xb|XS], L):- decoupe4(Xa,Xb,LT), carres4(XS,LTT), concatene(LT,LTT,L
 solution4(X):-bonnetaille(X,4),verifie4(X),transp(X,Y),bonnetaille(X,4),verifie4(Y), carres4(X,Z), verifie4(Z).
 
 /* Question 13 */
-?- use_module(library(crypto)).
-verifie16([]).
-verifie16([X|XS]) :- format('~d', X) ins 1..15, all_distinct(X),!, verifie16(XS).
+
+% verifie16([]).
+% verifie16([X|XS]) :- format('~d', X) ins 1..15, all_distinct(X),!, verifie16(XS).
 %
 % decoupe4([], [], []).
 % decoupe4([Xa,Xb|XS], [Ya,Yb|YS],[[Xa,Xb,Ya,Yb]|L]):- decoupe4(XS,YS,L).
