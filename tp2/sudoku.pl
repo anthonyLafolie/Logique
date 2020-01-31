@@ -29,57 +29,44 @@ grille4([[2,_,_,3],
          [1,_,_,_]]).
 
 grillehex([[b,2,_,7,_,_,_,f,6,e,_,_,_,3,_,d],
-           [_,_,_,9,b,_,2,_,_,_,_,_,f,1,_,6],
-      	   [_,a,_,c,_,_,7,_,4,_,8,_,_,_,e,_],
-           [_,8,_,3,_,_,1,_,_,_,f,c,a,_,4,2],
-           [_,_,e,_,_,_,_,_,1,6,a,_,_,_,3,_],
-           [3,_,_,_,_,_,_,_,_,4,_,f,8,_,6,b],
-           [_,_,_,d,2,_,_,_,_,b,_,_,7,4,_,_],
-           [_,b,8,4,0,_,_,d,7,_,9,3,e,_,_,_],
-           [_,_,_,f,3,7,_,4,5,_,_,9,0,d,c,_],
-           [_,_,c,8,_,_,a,_,_,_,_,b,4,_,_,_],
-           [4,9,_,5,e,_,d,_,_,_,_,_,_,_,_,a],
-           [_,d,_,_,_,6,c,1,_,_,_,_,_,7,_,_],
-           [9,1,_,e,7,4,_,_,_,f,_,_,3,_,d,_],
-           [_,3,_,_,_,9,_,2,_,1,_,_,5,_,0,_],
-           [f,_,4,b,_,_,_,_,_,3,_,d,1,_,_,_],
-				   [5,_,d,_,_,_,f,e,9,_,_,_,2,_,b,4]]).
+          [_,_,_,9,b,_,2,_,_,_,_,_,f,1,_,6],
+          [_,a,_,c,_,_,7,_,4,_,8,_,_,_,e,_],
+          [_,8,_,3,_,_,1,_,_,_,f,c,a,_,4,2],
+          [_,_,e,_,_,_,_,_,1,6,a,_,_,_,3,_],
+          [3,_,_,_,_,_,_,_,_,4,_,f,8,_,6,b],
+          [_,_,_,d,2,_,_,_,_,b,_,_,7,4,_,_],
+          [_,b,8,4,0,_,_,d,7,_,9,3,e,_,_,_],
+          [_,_,_,f,3,7,_,4,5,_,_,9,0,d,c,_],
+          [_,_,c,8,_,_,a,_,_,_,_,b,4,_,_,_],
+          [4,9,_,5,e,_,d,_,_,_,_,_,_,_,_,a],
+          [_,d,_,_,_,6,c,1,_,_,_,_,_,7,_,_],
+          [9,1,_,e,7,4,_,_,_,f,_,_,3,_,d,_],
+          [_,3,_,_,_,9,_,2,_,1,_,_,5,_,0,_],
+          [f,_,4,b,_,_,_,_,_,3,_,d,1,_,_,_],
+          [5,_,d,_,_,_,f,e,9,_,_,_,2,_,b,4]]).
 
-grillehex2([[7,_,_,0,_,_,14,6,_,_,_,15,_,_,12],
-            [_,_,_,9,7,6,_,1,4,_,3,15,10,_,_,_],
-            [_,_,_,_,_,_,_,11,9,_,_,_,_,_,_,_],
-            [_,15,3,_,_,12,2,_,_,11,7,_,_,6,8,_],
-            [5,12,15,_,_,10,11,4,0,3,1,_,_,14,6,2],
-            [_,_,_,6,2,_,1,_,_,10,_,14,0,_,_,_],
-            [3,9,11,1,0,_,14,7,2,4,_,6,12,10,15,8],
-            [_,2,0,7,_,_,12,9,15,8,_,_,14,5,4,_],
-            [6,_,14,_,_,_,3,15,10,1,_,_,_,11,_,7],
-            [_,3,_,11,_,_,10,6,8,9,_,_,14,_,2,_],
-            [0,_,1,15,14,11,_,_,_,_,6,2,9,8,_,14],
-            [_,10,_,8,_,0,7,_,_,14,15,_,6,_,1,_],
-            [8,_,9,_,_,_,_,10,11,_,_,_,_,15,_,4],
-            [_,_,6,4,11,14,_,_,_,_,8,10,2,1,_,_],
-            [14,5,_,_,15,7,_,_,_,_,14,3,_,_,9,10],
-            [1,11,_,_,_,2,1,13,5,15,9,_,_,_,14,6]
-           ]).
 
-% grille([[9,8,_,6,_,_,_,3,1],
-%         [_,_,7,_,_,_,_,_,_],
-%         [6,_,_,5,4,_,_,_,_],
-%         [_,_,_,_,_,8,3,7,4],
-%         [_,_,_,_,6,_,_,_,_],
-%         [_,_,_,_,_,_,9,_,2],
-%         [_,3,2,_,_,7,4,_,_],
-%         [_,4,_,3,_,_,_,1,_],
-%         [_,_,_,_,_,_,_,_,_]]).
 /* Question 1 */
-printline([]):- writeln('|').
-printline([X|XS]) :- integer(X), !, write('|'), write(X), printline(XS).
-printline([_|XS]) :- write('| '), printline(XS).
+% printline([]):- writeln('|').
+% printline([X|XS]) :- integer(X), !, write('|'), write(X), printline(XS).
+% printline([_|XS]) :- write('| '), printline(XS).
+%
+% /* Question 2 */
+% print([]):- writeln('').
+% print([X|XS]) :- printline(X), print(XS).
 
-/* Question 2 */
-print([]):- writeln('').
-print([X|XS]) :- printline(X), print(XS).
+
+printline([]) :- writeln("|").
+printline([X|XS]) :- integer(X),!,write("|"),transform(Y,X),write(Y),printline(XS).
+printline([X|XS]) :- atom(X),!,write("|"),write(X),printline(XS).
+printline([_|XS]) :- write("| "),printline(XS).
+
+%Q2
+
+print([]).
+/*On affiche la tete qui est un tableau de valeur puis on relance sur la queue qui est bien
+un tableau de tableau*/
+print([XS|XSS]) :- printline(XS),print(XSS).
 
 /* Question 3 */
 
@@ -171,12 +158,11 @@ transform(e,14).
 transform(f,15).
 
 transformList([],[]).
-transformList([X|XS],[Y|L]) :- transform(X,Y), transformList(XS,L).
-% transformList([_|XS],L) :- transformList(XS,L), transform2().
+transformList([X|XS],[Y|L]) :- nonvar(X),transform(X,Y), transformList(XS,L), !.
+transformList([X|XS],[X|L]) :- transformList(XS,L).
 
 verifie16([]).
-verifie16([X|XS]) :- X ins 0..15, !, verifie16(XS).
-% verifie16([X|XS]) :-  transformList(X,Y), Y ins 0..15, !, verifie16(XS).
+verifie16([X|XS]) :-  transformList(X,Y), Y ins 0..15,all_distinct(Y), !, verifie16(XS).
 
 decoupe16([], [], [], [],[]).
 decoupe16([Wa,Wb,Wc,Wd|WS],[Xa,Xb,Xc,Xd|XS], [Ya,Yb,Yc,Yd|YS],[Za,Zb,Zc,Zd|ZS],[[Wa,Wb,Wc,Wd,Xa,Xb,Xc,Xd,Ya,Yb,Yc,Yd,Za,Zb,Zc,Zd]|L]):- decoupe16(WS,XS,YS,ZS,L).
@@ -184,4 +170,4 @@ decoupe16([Wa,Wb,Wc,Wd|WS],[Xa,Xb,Xc,Xd|XS], [Ya,Yb,Yc,Yd|YS],[Za,Zb,Zc,Zd|ZS],[
 carres16([], []).
 carres16([Xa,Xb,Xc,Xd|XS], L):- decoupe16(Xa,Xb,Xc,Xd,LT), carres16(XS,LTT), concatene(LT,LTT,L).
 
-solution16(X):-bonnetaille(X,16),verifie16(X),transp(X,Y),bonnetaille(Y,16),verifie16(Y), carres16(X,Z), verifie16(Z).
+solution16(X):- bonnetaille(X,16),verifie16(X),transp(X,Y),bonnetaille(Y,16),verifie16(Y),carres16(X,Z), verifie16(Z).
